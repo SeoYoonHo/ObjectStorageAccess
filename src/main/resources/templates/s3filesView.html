@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오브젝트 스토리지 파일 관리</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="section object-storage-management">
+        <h1>오브젝트 스토리지 파일 관리</h1>
+    </div>
+
+    <div class="section file-list-section">
+        <h2>파일 목록</h2>
+        <div class="section file-list">
+            <ul>
+                <li th:each="file : ${files}">
+                    <span class="file-name" th:text="${file}"></span>
+                    <div class="actions">
+                        <button class="download-btn" th:attr="data-filename=${file}">다운로드</button>
+                        <button class="delete-btn" th:attr="data-filename=${file}">삭제</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section file-upload-section">
+        <h2>파일 업로드</h2>
+        <form id="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" id="file-input" required>
+            <button type="submit">업로드</button>
+        </form>
+    </div>
+</div>
+
+<!-- 분리된 JS 파일 추가 -->
+<script src="/js/fileActions.js"></script>
+</body>
+</html>

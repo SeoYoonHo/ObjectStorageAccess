@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: obj
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+    check-template-location: true

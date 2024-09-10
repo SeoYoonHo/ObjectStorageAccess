@@ -1,0 +1,125 @@
+/* 전체 레이아웃 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 섹션 구분 */
+.section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.object-storage-management {
+    background-color: #fafafa;
+}
+
+.file-list-section {
+    background-color: #f9f9f9;
+}
+
+.file-upload-section {
+    background-color: #f1f1f1;
+}
+
+/* 파일 리스트 스타일 */
+.file-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.file-list li {
+    display: flex;  /* 수평 정렬을 위해 flex 사용 */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.file-list li:nth-child(odd) {
+    background-color: #f1f8e9;
+}
+
+.file-list li:nth-child(even) {
+    background-color: #e0f2f1;
+}
+
+.file-list li:hover {
+    background-color: #e9e9e9;
+}
+
+/* 파일명 스타일 */
+.file-name {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+/* 버튼 스타일 */
+.actions {
+    display: flex;
+}
+
+.actions button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.actions button:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* 업로드 섹션 */
+form {
+    margin-top: 20px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
