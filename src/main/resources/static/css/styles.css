@@ -99,14 +99,17 @@ body {
 }
 
 /* 업로드 섹션 */
-form {
+.file-upload-section form {
+    display: flex;
+    justify-content: space-between; /* 파일 입력 필드와 버튼을 양 끝으로 정렬 */
+    align-items: center;
     margin-top: 20px;
 }
 
 input[type="file"] {
     padding: 10px;
-    margin-bottom: 10px;
-    width: 100%;
+    flex-grow: 1;  /* 입력 필드가 버튼을 밀어냄 */
+    margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
